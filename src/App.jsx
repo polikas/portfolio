@@ -1,9 +1,11 @@
 import { useState } from "react";
+import "../src/style/App.css";
+import BasicMenu from "./BasicMenu.jsx";
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <BasicMenu />
     </>
   );
 }
