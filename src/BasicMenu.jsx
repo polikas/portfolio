@@ -17,6 +17,8 @@ import Typography from "@mui/material/Typography";
 import { Avatar, Grid } from "@mui/material";
 import Projects from "./Projects";
 import { Link } from "react-scroll";
+import AboutMe from "./AboutMe";
+import Contact from "./Contact";
 
 const drawerWidth = 240;
 
@@ -61,12 +63,20 @@ function ResponsiveDrawer(props) {
       <List>
         {["About Me", "Contact"].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+            <Link
+              to={text}
+              smooth={true}
+              spy={true}
+              offset={-70}
+              duration={500}
+            >
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -94,14 +104,13 @@ function ResponsiveDrawer(props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           variant="temporary"
           open={mobileOpen}
           onTransitionEnd={handleDrawerTransitionEnd}
           onClose={handleDrawerClose}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -201,6 +210,54 @@ function ResponsiveDrawer(props) {
             </Toolbar>
           </AppBar>
           <Projects />
+        </Box>
+        <Box
+          id="About Me"
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 0,
+            m: 0,
+            width: "100%",
+          }}
+        >
+          <AppBar
+            position="static"
+            sx={{
+              width: "100%",
+            }}
+          >
+            <Toolbar>
+              <Typography variant="h6" noWrap component="div">
+                About Me
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <AboutMe />
+        </Box>
+        <Box
+          id="Contact"
+          component="main"
+          sx={{
+            flexGrow: 1,
+            p: 0,
+            m: 0,
+            width: "100%",
+          }}
+        >
+          <AppBar
+            position="static"
+            sx={{
+              width: "100%",
+            }}
+          >
+            <Toolbar>
+              <Typography variant="h6" noWrap component="div">
+                Contact
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Contact />
         </Box>
       </Box>
     </Box>
