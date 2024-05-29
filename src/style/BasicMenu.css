@@ -1,0 +1,11 @@
+.content-container {
+  min-height: calc(100vh - 34px);
+}
+
+.footer--pin {
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}

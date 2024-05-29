@@ -30,6 +30,11 @@ const Projects = () => {
     window.open(calculatorAppUrl, "_blank");
   };
 
+  const handleCalculatorHost = () => {
+    const calcluatorHostUrl = "https://mini-calclulator.netlify.app/";
+    window.open(calcluatorHostUrl, "_blank");
+  };
+
   const handleDictionaryApp = () => {
     const dictionaryAppUrl = "https://github.com/polikas/dictionary";
     window.open(dictionaryAppUrl, "_blank");
@@ -187,7 +192,7 @@ const Projects = () => {
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
           {trippInitemData.map((item) => (
             <ImageListItem key={item.img}>
-              <a href="#" onClick={handleCalculatorApp}>
+              <a href="#" onClick={handleCalculatorHost}>
                 <img
                   srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
