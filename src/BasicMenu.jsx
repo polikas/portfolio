@@ -191,7 +191,7 @@ function BasicMenu(props) {
               <Grid item xs={12} sm={6}>
                 <Avatar
                   alt="Stavros Charitos"
-                  src="/src/assets/me.jpg"
+                  src="/me.jpg"
                   sx={{ width: 400, height: 400 }}
                 />
               </Grid>

@@ -1,30 +1,30 @@
 export const articleItemData = [
   {
-    img: "src/assets/articles/articles.png",
+    img: "/articles.png",
     title: "application feature an image that is showing stay functionality",
     width: 300,
     height: 150,
   },
   {
-    img: "src/assets/articles/showComments.png",
+    img: "/showComments.png",
     title: "to do...",
     width: 300,
     height: 150,
   },
   {
-    img: "src/assets/articles/singleArticle.png",
+    img: "/singleArticle.png",
     title: "to do...",
     width: 300,
     height: 150,
   },
   {
-    img: "src/assets/articles/topics.png",
+    img: "/topics.png",
     title: "to do...",
     width: 300,
     height: 150,
   },
   {
-    img: "src/assets/articles/writeComment.png",
+    img: "/writeComment.png",
     title: "to do...",
     width: 300,
     height: 150,

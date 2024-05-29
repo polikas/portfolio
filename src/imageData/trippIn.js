@@ -1,31 +1,31 @@
 export const trippInitemData = [
   {
-    img: "src/assets/trippIn/signIn.png",
+    img: "/signIn.png",
     title: "application feature an image that is showing stay functionality",
     width: "100%",
   },
   {
-    img: "src/assets/trippIn/stay.png",
+    img: "/stay.png",
     title: "to do...",
     width: 150,
   },
   {
-    img: "src/assets/trippIn/travel.png",
+    img: "/travel.png",
     title: "to do...",
     width: 150,
   },
   {
-    img: "src/assets/trippIn/members.png",
+    img: "/members.png",
     title: "to do...",
     width: 150,
   },
   {
-    img: "src/assets/trippIn/chat.png",
+    img: "/chat.png",
     title: "to do...",
     width: 150,
   },
   {
-    img: "src/assets/trippIn/activities.png",
+    img: "/activities.png",
     title: "to do...",
     width: 150,
   },

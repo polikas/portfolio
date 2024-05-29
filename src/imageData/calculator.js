@@ -1,6 +1,6 @@
 export const calculatorItemData = [
   {
-    img: "src/assets/calculator/calclulatorHome.png",
+    img: "/calclulatorHome.png",
     title:
       "application feature an image that is showing a mini calculator which supports addition, subtraction, multiplication and division",
     width: 300,
