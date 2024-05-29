@@ -20,6 +20,10 @@ import { Link } from "react-scroll";
 import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AppsIcon from "@mui/icons-material/Apps";
+import MoodIcon from "@mui/icons-material/Mood";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 
 const drawerWidth = 240;
 
@@ -52,7 +56,7 @@ function BasicMenu(props) {
             >
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <AccountCircleIcon /> : <AppsIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -73,7 +77,7 @@ function BasicMenu(props) {
             >
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <MoodIcon /> : <ContactMailIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -132,6 +136,7 @@ function BasicMenu(props) {
                 "& .MuiDrawer-paper": {
                   boxSizing: "border-box",
                   width: drawerWidth,
+                  backgroundColor: "#f4f2ee",
                 },
               }}
               open

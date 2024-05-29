@@ -12,6 +12,15 @@ import {
   techStackArticlesBE,
   techStackArticlesFE,
 } from "./imageData/articles";
+import { snakeItemData, techStackSnakeFE } from "./imageData/snake";
+import {
+  dictionaryItemData,
+  techStackDictionaryFE,
+} from "./imageData/dictionary";
+import {
+  calculatorItemData,
+  techStackCalculatorFE,
+} from "./imageData/calculator";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Projects = () => {
@@ -21,8 +30,13 @@ const Projects = () => {
   };
 
   const handleArticlesApp = () => {
-    const articlesAppUrl = "https://articles-gallery.netlify.app/";
+    const articlesAppUrl = "https://github.com/polikas/fe-nc-news";
     window.open(articlesAppUrl, "_blank");
+  };
+
+  const handleArticlesHost = () => {
+    const articlesHostUrl = "https://articles-gallery.netlify.app/";
+    window.open(articlesHostUrl, "_blank");
   };
 
   const handleCalculatorApp = () => {
@@ -40,9 +54,19 @@ const Projects = () => {
     window.open(dictionaryAppUrl, "_blank");
   };
 
+  const handleDictionaryHost = () => {
+    const dictionaryHostUrl = "https://stavros-dictionary.netlify.app/";
+    window.open(dictionaryHostUrl, "_blank");
+  };
+
   const handleSnakeApp = () => {
     const snakeAppUrl = "https://github.com/polikas/snake";
     window.open(snakeAppUrl, "_blank");
+  };
+
+  const handleSnakeHost = () => {
+    const snakeHostUrl = "https://stavros-snake.netlify.app/";
+    window.open(snakeHostUrl, "_blank");
   };
 
   const techStackTripAppBE = () => {
@@ -68,6 +92,27 @@ const Projects = () => {
 
   const techStackArticleFE = () => {
     const listItems = techStackArticlesFE.map((item) => {
+      return <li key={item}>{item}</li>;
+    });
+    return <ul>{listItems}</ul>;
+  };
+
+  const techStackSnake = () => {
+    const listItems = techStackSnakeFE.map((item) => {
+      return <li key={item}>{item}</li>;
+    });
+    return <ul>{listItems}</ul>;
+  };
+
+  const techStackDictionary = () => {
+    const listItems = techStackDictionaryFE.map((item) => {
+      return <li key={item}>{item}</li>;
+    });
+    return <ul>{listItems}</ul>;
+  };
+
+  const techStackCalculator = () => {
+    const listItems = techStackCalculatorFE.map((item) => {
       return <li key={item}>{item}</li>;
     });
     return <ul>{listItems}</ul>;
@@ -143,7 +188,7 @@ const Projects = () => {
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
           {articleItemData.map((item) => (
             <ImageListItem key={item.img}>
-              <a href="#" onClick={handleArticlesApp}>
+              <a href="#" onClick={handleArticlesHost}>
                 <img
                   srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
@@ -181,7 +226,14 @@ const Projects = () => {
           project React library, JavaScript and MUI Core for styled components.
         </Typography>
         <Typography paragraph>
-          some other context maybe images of technologies?
+          Available Source Code on GitHub
+          <a
+            href="#"
+            onClick={handleArticlesApp}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <GitHubIcon sx={{ fontSize: 40 }} />
+          </a>
         </Typography>
       </Grid>
       <Grid item xs={12} sm={4}>
@@ -190,7 +242,7 @@ const Projects = () => {
           Calculator
         </Typography>
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {trippInitemData.map((item) => (
+          {calculatorItemData.map((item) => (
             <ImageListItem key={item.img}>
               <a href="#" onClick={handleCalculatorHost}>
                 <img
@@ -210,6 +262,8 @@ const Projects = () => {
           {" "}
           Tech Stack
         </Typography>
+        <Typography>Front-end</Typography>
+        {techStackCalculator()}
       </Grid>
       <Grid item xs={12} sm={4}>
         <Typography variant="h4" gutterBottom>
@@ -230,8 +284,14 @@ const Projects = () => {
           to have met a real-world need with our app.”
         </Typography>
         <Typography paragraph>
-          some other context maybe images of technologies? Github source code
-          icon with link to the source code?
+          Available Source Code on GitHub
+          <a
+            href="#"
+            onClick={handleCalculatorApp}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <GitHubIcon sx={{ fontSize: 40 }} />
+          </a>
         </Typography>
       </Grid>
       <Grid item xs={12} sm={4}>
@@ -240,9 +300,9 @@ const Projects = () => {
           Dictionary
         </Typography>
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {trippInitemData.map((item) => (
+          {dictionaryItemData.map((item) => (
             <ImageListItem key={item.img}>
-              <a href="#" onClick={handleDictionaryApp}>
+              <a href="#" onClick={handleDictionaryHost}>
                 <img
                   srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
@@ -260,6 +320,8 @@ const Projects = () => {
           {" "}
           Tech Stack
         </Typography>
+        <Typography>Front-end</Typography>
+        {techStackDictionary()}
       </Grid>
       <Grid item xs={12} sm={4}>
         <Typography variant="h4" gutterBottom>
@@ -280,8 +342,14 @@ const Projects = () => {
           to have met a real-world need with our app.”
         </Typography>
         <Typography paragraph>
-          some other context maybe images of technologies? Github source code
-          icon with link to the source code?
+          Available Source Code on GitHub
+          <a
+            href="#"
+            onClick={handleDictionaryApp}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <GitHubIcon sx={{ fontSize: 40 }} />
+          </a>
         </Typography>
       </Grid>
       <Grid item xs={12} sm={4}>
@@ -290,9 +358,9 @@ const Projects = () => {
           Classic Snake Game
         </Typography>
         <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {trippInitemData.map((item) => (
+          {snakeItemData.map((item) => (
             <ImageListItem key={item.img}>
-              <a href="#" onClick={handleSnakeApp}>
+              <a href="#" onClick={handleSnakeHost}>
                 <img
                   srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                   src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
@@ -310,6 +378,8 @@ const Projects = () => {
           {" "}
           Tech Stack
         </Typography>
+        <Typography>Front-end</Typography>
+        {techStackSnake()}
       </Grid>
       <Grid item xs={12} sm={4}>
         <Typography variant="h4" gutterBottom>
@@ -330,8 +400,14 @@ const Projects = () => {
           to have met a real-world need with our app.”
         </Typography>
         <Typography paragraph>
-          some other context maybe images of technologies? Github source code
-          icon with link to the source code?
+          Available Source Code on GitHub
+          <a
+            href="#"
+            onClick={handleSnakeApp}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <GitHubIcon sx={{ fontSize: 40 }} />
+          </a>
         </Typography>
       </Grid>
     </Grid>
