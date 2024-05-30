@@ -5,16 +5,16 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Avatar, Grid } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import Projects from "./Projects";
 import { Link } from "react-scroll";
 import AboutMe from "./AboutMe";
@@ -29,15 +29,9 @@ const drawerWidth = 240;
 
 function BasicMenu(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [isClosing, setIsClosing] = React.useState(false);
 
-  const handleDrawerClose = () => {
-    setIsClosing(true);
-    setMobileOpen(false);
-  };
-
-  const handleDrawerTransitionEnd = () => {
-    setIsClosing(false);
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
@@ -91,7 +85,7 @@ function BasicMenu(props) {
   return (
     <>
       <div className="content-container">
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", width: "100%" }}>
           <CssBaseline />
           <AppBar
             position="fixed"
@@ -101,6 +95,15 @@ function BasicMenu(props) {
             }}
           >
             <Toolbar>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: "none" } }}
+              >
+                <MenuIcon />
+              </IconButton>
               <Typography variant="h6" noWrap component="div">
                 Welcome To Stavros Charitos Portfolio
               </Typography>
@@ -114,8 +117,7 @@ function BasicMenu(props) {
             <Drawer
               variant="temporary"
               open={mobileOpen}
-              onTransitionEnd={handleDrawerTransitionEnd}
-              onClose={handleDrawerClose}
+              onClose={handleDrawerToggle}
               ModalProps={{
                 keepMounted: true,
               }}
@@ -153,7 +155,7 @@ function BasicMenu(props) {
             }}
           >
             <Toolbar />
-            <Grid container spacing={30}>
+            <Grid container spacing={3}>
               <Grid item xs={12} sm={6}>
                 <Typography paragraph>
                   Consequat mauris nunc congue nisi vitae suscipit. Fringilla
@@ -188,17 +190,17 @@ function BasicMenu(props) {
                   sagittis orci a.
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} container justifyContent="center" alignItems="center">
                 <Avatar
                   alt="Stavros Charitos"
                   src="/me.jpg"
-                  sx={{ width: 400, height: 400 }}
+                  sx={{ width: { xs: 150, sm: 500 }, height: { xs: 150, sm: 500 } }}
                 />
               </Grid>
             </Grid>
             <Box
               id="Projects"
-              component="main"
+              component="section"
               sx={{
                 flexGrow: 1,
                 p: 0,
@@ -222,7 +224,7 @@ function BasicMenu(props) {
             </Box>
             <Box
               id="About Me"
-              component="main"
+              component="section"
               sx={{
                 flexGrow: 1,
                 p: 0,
@@ -246,7 +248,7 @@ function BasicMenu(props) {
             </Box>
             <Box
               id="Contact"
-              component="main"
+              component="section"
               sx={{
                 flexGrow: 1,
                 p: 0,
@@ -262,7 +264,7 @@ function BasicMenu(props) {
               >
                 <Toolbar>
                   <Typography variant="h6" noWrap component="div">
-                    Contact TEST MERGE WITH HOSTING
+                    Contact
                   </Typography>
                 </Toolbar>
               </AppBar>

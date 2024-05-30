@@ -119,298 +119,289 @@ const Projects = () => {
   };
 
   return (
-    <Grid container spacing={0}>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h3" gutterBottom>
-          {" "}
-          TrippIn
-        </Typography>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {trippInitemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <a href="#" onClick={handleTripApp}>
-                <img
-                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                  alt={item.title}
-                  width={item.width}
-                  loading="lazy"
-                />
-              </a>
-            </ImageListItem>
-          ))}
-        </ImageList>
+    <Box sx={{ overflowX: "hidden" }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            TrippIn
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {trippInitemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleTripApp}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Back-end</Typography>
+          {techStackTripAppBE()}
+          <Typography>Front-end</Typography>
+          {techStackTripAppFE()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            Trippin is a mobile app designed for seamless trip planning. Our team
+            recognized the challenges of coordinating group trips, where travel
+            details are scattered across various platforms like email, Facebook,
+            and WhatsApp chats. To address this, we created Trippin—a centralized
+            hub where trip members can access all relevant information about their
+            upcoming adventures. We prioritized flexibility, allowing admins to
+            manage group membership while granting trip members the freedom to
+            contribute and update travel, accommodation, and activity choices.
+            Additionally, Trippin enables private in-app chats among members,
+            ensuring everyone stays connected during their journeys. We’re proud
+            to have met a real-world need with our app.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleTripApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
+        {/* Repeat similar structure for other projects */}
+        {/* NC News - Articles */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            NC News - Articles
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {articleItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleArticlesHost}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Back-end</Typography>
+          {techStackArticleBE()}
+          <Typography>Front-end</Typography>
+          {techStackArticleFE()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            A Web App for social news aggregation, where the user can view
+            articles, comments, divide article by topics, vote an article and
+            add/delete comments to an article. It is using a backend server with a
+            list of integrated APIs. The project is focused on functionality and
+            not at styling and user experience so much. Technologies used for this
+            project React library, JavaScript and MUI Core for styled components.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleArticlesApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
+        {/* Calculator */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            Calculator
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {calculatorItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleCalculatorHost}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Front-end</Typography>
+          {techStackCalculator()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            Trippin is a mobile app designed for seamless trip planning. Our team
+            recognized the challenges of coordinating group trips, where travel
+            details are scattered across various platforms like email, Facebook,
+            and WhatsApp chats. To address this, we created Trippin—a centralized
+            hub where trip members can access all relevant information about their
+            upcoming adventures. We prioritized flexibility, allowing admins to
+            manage group membership while granting trip members the freedom to
+            contribute and update travel, accommodation, and activity choices.
+            Additionally, Trippin enables private in-app chats among members,
+            ensuring everyone stays connected during their journeys. We’re proud
+            to have met a real-world need with our app.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleCalculatorApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
+        {/* Dictionary */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            Dictionary
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {dictionaryItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleDictionaryHost}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Front-end</Typography>
+          {techStackDictionary()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            Trippin is a mobile app designed for seamless trip planning. Our team
+            recognized the challenges of coordinating group trips, where travel
+            details are scattered across various platforms like email, Facebook,
+            and WhatsApp chats. To address this, we created Trippin—a centralized
+            hub where trip members can access all relevant information about their
+            upcoming adventures. We prioritized flexibility, allowing admins to
+            manage group membership while granting trip members the freedom to
+            contribute and update travel, accommodation, and activity choices.
+            Additionally, Trippin enables private in-app chats among members,
+            ensuring everyone stays connected during their journeys. We’re proud
+            to have met a real-world need with our app.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleDictionaryApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
+        {/* Classic Snake Game */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            Classic Snake Game
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {snakeItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleSnakeHost}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Front-end</Typography>
+          {techStackSnake()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            Trippin is a mobile app designed for seamless trip planning. Our team
+            recognized the challenges of coordinating group trips, where travel
+            details are scattered across various platforms like email, Facebook,
+            and WhatsApp chats. To address this, we created Trippin—a centralized
+            hub where trip members can access all relevant information about their
+            upcoming adventures. We prioritized flexibility, allowing admins to
+            manage group membership while granting trip members the freedom to
+            contribute and update travel, accommodation, and activity choices.
+            Additionally, Trippin enables private in-app chats among members,
+            ensuring everyone stays connected during their journeys. We’re proud
+            to have met a real-world need with our app.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleSnakeApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
       </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Tech Stack
-        </Typography>
-        <Typography>Back-end</Typography>
-        {techStackTripAppBE()}
-        <Typography>Front-end</Typography>
-        {techStackTripAppFE()}
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Project Description
-        </Typography>
-        <Typography paragraph>
-          “Trippin is a mobile app designed for seamless trip planning. Our team
-          recognized the challenges of coordinating group trips, where travel
-          details are scattered across various platforms like email, Facebook,
-          and WhatsApp chats. To address this, we created Trippin—a centralized
-          hub where trip members can access all relevant information about their
-          upcoming adventures. We prioritized flexibility, allowing admins to
-          manage group membership while granting trip members the freedom to
-          contribute and update travel, accommodation, and activity choices.
-          Additionally, Trippin enables private in-app chats among members,
-          ensuring everyone stays connected during their journeys. We’re proud
-          to have met a real-world need with our app.”
-        </Typography>
-        <Typography paragraph>
-          Available Source Code on GitHub
-          <a
-            href="#"
-            onClick={handleTripApp}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <GitHubIcon sx={{ fontSize: 40 }} />
-          </a>
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h3" gutterBottom>
-          {" "}
-          NC News - Articles
-        </Typography>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {articleItemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <a href="#" onClick={handleArticlesHost}>
-                <img
-                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                  alt={item.title}
-                  width={item.width}
-                  height={item.height}
-                  loading="lazy"
-                />
-              </a>
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Tech Stack
-        </Typography>
-        <Typography>Back-end</Typography>
-        {techStackArticleBE()}
-        <Typography>Front-end</Typography>
-        {techStackArticleFE()}
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Project Description
-        </Typography>
-        <Typography paragraph>
-          A Web App for social news aggregation, where the user can view
-          articles, comments, divide article by topics, vote an article and
-          add/delete comments to an article. It is using a backend server with a
-          list of integrated APIs. The project is focused on functionality and
-          not at styling and user experience so much. Technologies used for this
-          project React library, JavaScript and MUI Core for styled components.
-        </Typography>
-        <Typography paragraph>
-          Available Source Code on GitHub
-          <a
-            href="#"
-            onClick={handleArticlesApp}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <GitHubIcon sx={{ fontSize: 40 }} />
-          </a>
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h3" gutterBottom>
-          {" "}
-          Calculator
-        </Typography>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {calculatorItemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <a href="#" onClick={handleCalculatorHost}>
-                <img
-                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                  alt={item.title}
-                  width={item.width}
-                  loading="lazy"
-                />
-              </a>
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Tech Stack
-        </Typography>
-        <Typography>Front-end</Typography>
-        {techStackCalculator()}
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Project Description
-        </Typography>
-        <Typography paragraph>
-          “Trippin is a mobile app designed for seamless trip planning. Our team
-          recognized the challenges of coordinating group trips, where travel
-          details are scattered across various platforms like email, Facebook,
-          and WhatsApp chats. To address this, we created Trippin—a centralized
-          hub where trip members can access all relevant information about their
-          upcoming adventures. We prioritized flexibility, allowing admins to
-          manage group membership while granting trip members the freedom to
-          contribute and update travel, accommodation, and activity choices.
-          Additionally, Trippin enables private in-app chats among members,
-          ensuring everyone stays connected during their journeys. We’re proud
-          to have met a real-world need with our app.”
-        </Typography>
-        <Typography paragraph>
-          Available Source Code on GitHub
-          <a
-            href="#"
-            onClick={handleCalculatorApp}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <GitHubIcon sx={{ fontSize: 40 }} />
-          </a>
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h3" gutterBottom>
-          {" "}
-          Dictionary
-        </Typography>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {dictionaryItemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <a href="#" onClick={handleDictionaryHost}>
-                <img
-                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                  alt={item.title}
-                  width={item.width}
-                  loading="lazy"
-                />
-              </a>
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Tech Stack
-        </Typography>
-        <Typography>Front-end</Typography>
-        {techStackDictionary()}
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Project Description
-        </Typography>
-        <Typography paragraph>
-          “Trippin is a mobile app designed for seamless trip planning. Our team
-          recognized the challenges of coordinating group trips, where travel
-          details are scattered across various platforms like email, Facebook,
-          and WhatsApp chats. To address this, we created Trippin—a centralized
-          hub where trip members can access all relevant information about their
-          upcoming adventures. We prioritized flexibility, allowing admins to
-          manage group membership while granting trip members the freedom to
-          contribute and update travel, accommodation, and activity choices.
-          Additionally, Trippin enables private in-app chats among members,
-          ensuring everyone stays connected during their journeys. We’re proud
-          to have met a real-world need with our app.”
-        </Typography>
-        <Typography paragraph>
-          Available Source Code on GitHub
-          <a
-            href="#"
-            onClick={handleDictionaryApp}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <GitHubIcon sx={{ fontSize: 40 }} />
-          </a>
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h3" gutterBottom>
-          {" "}
-          Classic Snake Game
-        </Typography>
-        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-          {snakeItemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <a href="#" onClick={handleSnakeHost}>
-                <img
-                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                  alt={item.title}
-                  width={item.width}
-                  loading="lazy"
-                />
-              </a>
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Tech Stack
-        </Typography>
-        <Typography>Front-end</Typography>
-        {techStackSnake()}
-      </Grid>
-      <Grid item xs={12} sm={4}>
-        <Typography variant="h4" gutterBottom>
-          {" "}
-          Project Description
-        </Typography>
-        <Typography paragraph>
-          “Trippin is a mobile app designed for seamless trip planning. Our team
-          recognized the challenges of coordinating group trips, where travel
-          details are scattered across various platforms like email, Facebook,
-          and WhatsApp chats. To address this, we created Trippin—a centralized
-          hub where trip members can access all relevant information about their
-          upcoming adventures. We prioritized flexibility, allowing admins to
-          manage group membership while granting trip members the freedom to
-          contribute and update travel, accommodation, and activity choices.
-          Additionally, Trippin enables private in-app chats among members,
-          ensuring everyone stays connected during their journeys. We’re proud
-          to have met a real-world need with our app.”
-        </Typography>
-        <Typography paragraph>
-          Available Source Code on GitHub
-          <a
-            href="#"
-            onClick={handleSnakeApp}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <GitHubIcon sx={{ fontSize: 40 }} />
-          </a>
-        </Typography>
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
 
