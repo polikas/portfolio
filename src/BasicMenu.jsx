@@ -262,7 +262,7 @@ function BasicMenu(props) {
               >
                 <Toolbar>
                   <Typography variant="h6" noWrap component="div">
-                    Contact
+                    Contact TEST MERGE WITH HOSTING
                   </Typography>
                 </Toolbar>
               </AppBar>
