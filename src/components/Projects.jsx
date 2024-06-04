@@ -6,21 +6,21 @@ import {
   trippInitemData,
   techStackTrippInBE,
   techStackTrippInFE,
-} from "./imageData/trippIn";
+} from "../imageData/trippIn";
 import {
   articleItemData,
   techStackArticlesBE,
   techStackArticlesFE,
-} from "./imageData/articles";
-import { snakeItemData, techStackSnakeFE } from "./imageData/snake";
+} from "../imageData/articles";
+import { snakeItemData, techStackSnakeFE } from "../imageData/snake";
 import {
   dictionaryItemData,
   techStackDictionaryFE,
-} from "./imageData/dictionary";
+} from "../imageData/dictionary";
 import {
   calculatorItemData,
   techStackCalculatorFE,
-} from "./imageData/calculator";
+} from "../imageData/calculator";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Projects = () => {
