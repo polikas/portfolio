@@ -121,6 +121,7 @@ const Projects = () => {
   return (
     <Box sx={{ overflowX: "hidden" }}>
       <Grid container spacing={2}>
+        {/* TrippIn */}
         <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h3" gutterBottom>
             TrippIn
@@ -155,17 +156,18 @@ const Projects = () => {
             Project Description
           </Typography>
           <Typography paragraph>
-            Trippin is a mobile app designed for seamless trip planning. Our team
-            recognized the challenges of coordinating group trips, where travel
-            details are scattered across various platforms like email, Facebook,
-            and WhatsApp chats. To address this, we created Trippin—a centralized
-            hub where trip members can access all relevant information about their
-            upcoming adventures. We prioritized flexibility, allowing admins to
-            manage group membership while granting trip members the freedom to
-            contribute and update travel, accommodation, and activity choices.
-            Additionally, Trippin enables private in-app chats among members,
-            ensuring everyone stays connected during their journeys. We’re proud
-            to have met a real-world need with our app.
+            Trippin is a mobile app designed for seamless trip planning. Our
+            team recognized the challenges of coordinating group trips, where
+            travel details are scattered across various platforms like email,
+            Facebook, and WhatsApp chats. To address this, we created Trippin—a
+            centralized hub where trip members can access all relevant
+            information about their upcoming adventures. We prioritized
+            flexibility, allowing admins to manage group membership while
+            granting trip members the freedom to contribute and update travel,
+            accommodation, and activity choices. Additionally, Trippin enables
+            private in-app chats among members, ensuring everyone stays
+            connected during their journeys. We’re proud to have met a
+            real-world need with our app.
           </Typography>
           <Typography paragraph>
             Available Source Code on GitHub
@@ -178,7 +180,6 @@ const Projects = () => {
             </a>
           </Typography>
         </Grid>
-        {/* Repeat similar structure for other projects */}
         {/* NC News - Articles */}
         <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h3" gutterBottom>
@@ -216,128 +217,17 @@ const Projects = () => {
           <Typography paragraph>
             A Web App for social news aggregation, where the user can view
             articles, comments, divide article by topics, vote an article and
-            add/delete comments to an article. It is using a backend server with a
-            list of integrated APIs. The project is focused on functionality and
-            not at styling and user experience so much. Technologies used for this
-            project React library, JavaScript and MUI Core for styled components.
+            add/delete comments to an article. It is using a backend server with
+            a list of integrated APIs. The project is focused on functionality
+            and not at styling and user experience so much. Technologies used
+            for this project React library, JavaScript and MUI Core for styled
+            components.
           </Typography>
           <Typography paragraph>
             Available Source Code on GitHub
             <a
               href="#"
               onClick={handleArticlesApp}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <GitHubIcon sx={{ fontSize: 40 }} />
-            </a>
-          </Typography>
-        </Grid>
-        {/* Calculator */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="h3" gutterBottom>
-            Calculator
-          </Typography>
-          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
-            {calculatorItemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <a href="#" onClick={handleCalculatorHost}>
-                  <img
-                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                    alt={item.title}
-                    style={{ width: "100%" }}
-                    loading="lazy"
-                  />
-                </a>
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="h4" gutterBottom>
-            Tech Stack
-          </Typography>
-          <Typography>Front-end</Typography>
-          {techStackCalculator()}
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="h4" gutterBottom>
-            Project Description
-          </Typography>
-          <Typography paragraph>
-            Trippin is a mobile app designed for seamless trip planning. Our team
-            recognized the challenges of coordinating group trips, where travel
-            details are scattered across various platforms like email, Facebook,
-            and WhatsApp chats. To address this, we created Trippin—a centralized
-            hub where trip members can access all relevant information about their
-            upcoming adventures. We prioritized flexibility, allowing admins to
-            manage group membership while granting trip members the freedom to
-            contribute and update travel, accommodation, and activity choices.
-            Additionally, Trippin enables private in-app chats among members,
-            ensuring everyone stays connected during their journeys. We’re proud
-            to have met a real-world need with our app.
-          </Typography>
-          <Typography paragraph>
-            Available Source Code on GitHub
-            <a
-              href="#"
-              onClick={handleCalculatorApp}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <GitHubIcon sx={{ fontSize: 40 }} />
-            </a>
-          </Typography>
-        </Grid>
-        {/* Dictionary */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="h3" gutterBottom>
-            Dictionary
-          </Typography>
-          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
-            {dictionaryItemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <a href="#" onClick={handleDictionaryHost}>
-                  <img
-                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                    alt={item.title}
-                    style={{ width: "100%" }}
-                    loading="lazy"
-                  />
-                </a>
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="h4" gutterBottom>
-            Tech Stack
-          </Typography>
-          <Typography>Front-end</Typography>
-          {techStackDictionary()}
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="h4" gutterBottom>
-            Project Description
-          </Typography>
-          <Typography paragraph>
-            Trippin is a mobile app designed for seamless trip planning. Our team
-            recognized the challenges of coordinating group trips, where travel
-            details are scattered across various platforms like email, Facebook,
-            and WhatsApp chats. To address this, we created Trippin—a centralized
-            hub where trip members can access all relevant information about their
-            upcoming adventures. We prioritized flexibility, allowing admins to
-            manage group membership while granting trip members the freedom to
-            contribute and update travel, accommodation, and activity choices.
-            Additionally, Trippin enables private in-app chats among members,
-            ensuring everyone stays connected during their journeys. We’re proud
-            to have met a real-world need with our app.
-          </Typography>
-          <Typography paragraph>
-            Available Source Code on GitHub
-            <a
-              href="#"
-              onClick={handleDictionaryApp}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <GitHubIcon sx={{ fontSize: 40 }} />
@@ -377,23 +267,124 @@ const Projects = () => {
             Project Description
           </Typography>
           <Typography paragraph>
-            Trippin is a mobile app designed for seamless trip planning. Our team
-            recognized the challenges of coordinating group trips, where travel
-            details are scattered across various platforms like email, Facebook,
-            and WhatsApp chats. To address this, we created Trippin—a centralized
-            hub where trip members can access all relevant information about their
-            upcoming adventures. We prioritized flexibility, allowing admins to
-            manage group membership while granting trip members the freedom to
-            contribute and update travel, accommodation, and activity choices.
-            Additionally, Trippin enables private in-app chats among members,
-            ensuring everyone stays connected during their journeys. We’re proud
-            to have met a real-world need with our app.
+            I developed a classic snake game web application that evokes
+            nostalgia for the beloved mobile game back in the days. Leveraging
+            React and PixiJS, a powerful graphics rendering framework, I crafted
+            an immersive experience reminiscent of the iconic snake game. This
+            project served as an exploration of PixiJS's capabilities, allowing
+            me to delve into its intricacies while leveraging its features to
+            create engaging visual elements such as dynamic rectangles and
+            graphics. The game's difficulty dynamically adjusts as players
+            progress, with each consumption of three orbs by the
+            player-controlled snake leading to an increment in challenge level.
+            This adaptive difficulty curve ensures an engaging and progressively
+            challenging gameplay experience. Throughout the project, I conducted
+            extensive research on snake game mechanics and leveraged React.js to
+            efficiently manage application state and UI components.
           </Typography>
           <Typography paragraph>
             Available Source Code on GitHub
             <a
               href="#"
               onClick={handleSnakeApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
+        {/* Dictionary */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            Dictionary
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {dictionaryItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleDictionaryHost}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Front-end</Typography>
+          {techStackDictionary()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            A native small-scale project that showcases the utilization of
+            third-party APIs. The project focuses on extracting relevant data
+            related to words, similar to a dictionary. I implemented it using
+            React and leveraged the Axios library for API requests. Overall, it
+            was a valuable exercise in strengthening my skills in working with
+            external APIs and integrating them seamlessly.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleDictionaryApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
+        {/* Calculator */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            Calculator
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {calculatorItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleCalculatorHost}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Front-end</Typography>
+          {techStackCalculator()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            A web app calculator which supports addition, subtraction,
+            multiplication and division, built with React.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleCalculatorApp}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <GitHubIcon sx={{ fontSize: 40 }} />
