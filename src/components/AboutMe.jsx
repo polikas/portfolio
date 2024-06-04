@@ -37,13 +37,23 @@ const AboutMe = () => {
         </Typography>
         <Typography paragraph>
           My journey into software development began at 21, guided by online
-          courses and one-on-one mentorship from the talented Michael Vogiatzis.
-          His mentorship provided a strong foundation in programming principles.
-          I actively participate in local developer events hosted by industry
-          experts, which are excellent opportunities for networking, live
-          coding, and gaining inspiration. During my studies, I also engaged in
-          Hackathons and Game Jams, both internally and externally, which
-          enhanced my ability to think creatively and work effectively in
+          courses and one-on-one mentorship from the talented{" "}
+          <a
+            href="https://www.linkedin.com/in/michaelvogiatzis/"
+            target="_blank"
+          >
+            Michael Vogiatzis,
+          </a>{" "}
+          visit his{" "}
+          <a href="https://www.foxymonkey.com/" target="_blank">
+            blog
+          </a>
+          . His mentorship provided a strong foundation in programming
+          principles. I actively participate in local developer events hosted by
+          industry experts, which are excellent opportunities for networking,
+          live coding, and gaining inspiration. During my studies, I also
+          engaged in Hackathons and Game Jams, both internally and externally,
+          which enhanced my ability to think creatively and work effectively in
           high-pressure team environments.
         </Typography>
         <Typography paragraph>
