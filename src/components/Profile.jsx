@@ -40,7 +40,7 @@ const Profile = () => {
       >
         <Avatar
           alt="Stavros Charitos"
-          src="/me.jpg"
+          src="/me2.jpg"
           sx={{ width: { xs: 150, sm: 500 }, height: { xs: 150, sm: 500 } }}
         />
       </Grid>
