@@ -5,25 +5,34 @@ import ImageListItem from "@mui/material/ImageListItem";
 import {
   trippInitemData,
   techStackTrippInBE,
-  techStackTrippInFE,
+  techStackTrippInFE
 } from "../imageData/trippIn";
+import {
+  exhibitionCuratorItemData,
+  techStackExhibitionCuratorFE
+} from "../imageData/exhibitionCurator";
 import {
   articleItemData,
   techStackArticlesBE,
-  techStackArticlesFE,
+  techStackArticlesFE
 } from "../imageData/articles";
 import { snakeItemData, techStackSnakeFE } from "../imageData/snake";
 import {
   dictionaryItemData,
-  techStackDictionaryFE,
+  techStackDictionaryFE
 } from "../imageData/dictionary";
 import {
   calculatorItemData,
-  techStackCalculatorFE,
+  techStackCalculatorFE
 } from "../imageData/calculator";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Projects = () => {
+  const handleExhibitionCuratorApp = () => {
+    const exhibitionCuratorUrl = "https://github.com/polikas/ExhibitionCurator";
+    window.open(exhibitionCuratorUrl, "_blank");
+  };
+
   const handleTripApp = () => {
     const tripAppUrl = "https://github.com/polikas/TripApp";
     window.open(tripAppUrl, "_blank");
@@ -67,6 +76,13 @@ const Projects = () => {
   const handleSnakeHost = () => {
     const snakeHostUrl = "https://stavros-snake.netlify.app/";
     window.open(snakeHostUrl, "_blank");
+  };
+
+  const techStackExhibitonCuratorFE = () => {
+    const listItems = techStackExhibitionCuratorFE.map((item) => {
+      return <li key={item}>{item}</li>;
+    });
+    return <ul>{listItems}</ul>;
   };
 
   const techStackTripAppBE = () => {
@@ -121,6 +137,61 @@ const Projects = () => {
   return (
     <Box sx={{ overflowX: "hidden" }}>
       <Grid container spacing={2}>
+        {/* ExhibitionCurator */}
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h3" gutterBottom>
+            ExhibitonCurator
+          </Typography>
+          <ImageList sx={{ width: "100%" }} cols={2} rowHeight={164}>
+            {exhibitionCuratorItemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <a href="#" onClick={handleExhibitionCuratorApp}>
+                  <img
+                    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                    alt={item.title}
+                    style={{ width: "100%" }}
+                    loading="lazy"
+                  />
+                </a>
+              </ImageListItem>
+            ))}
+          </ImageList>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Tech Stack
+          </Typography>
+          <Typography>Back-end</Typography>
+          <Typography>Front-end</Typography>
+          {techStackExhibitonCuratorFE()}
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Typography variant="h4" gutterBottom>
+            Project Description
+          </Typography>
+          <Typography paragraph>
+            This project is a mobile application built using Expo Go that allows
+            users to curate a personalized art exhibition by selecting artworks
+            from various museum collections. Users can search and filter
+            artworks based on keywords or presets, and create a temporary
+            exhibition by selecting artworks they like. The exhibition displays
+            images and detailed information about the selected artworks, with
+            links to find out more or view them in person. The exhibition
+            persists for the duration of the user session, allowing users to
+            interact with their selections.
+          </Typography>
+          <Typography paragraph>
+            Available Source Code on GitHub
+            <a
+              href="#"
+              onClick={handleExhibitionCuratorApp}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <GitHubIcon sx={{ fontSize: 40 }} />
+            </a>
+          </Typography>
+        </Grid>
         {/* TrippIn */}
         <Grid item xs={12} sm={6} md={4}>
           <Typography variant="h3" gutterBottom>
